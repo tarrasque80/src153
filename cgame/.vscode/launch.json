@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Debug Makefile",
+            "type": "cppdbg", // 或 "cppvsdbg" 取决于你的平台
+            "request": "launch",
+            "program": "/root/src153/cgame/gs/gs", // 更改为你的可执行文件路径
+            "args": [], // 可传递给可执行文件的参数
+            "stopAtEntry": false, // 是否在入口停下
+            "cwd": "/root/pwserver/gamed", // 工作目录
+            "environment": [], // 环境变量
+            "externalConsole": false, // 是否使用外部控制台
+            "MIMode": "gdb", // 使用的调试器
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build", // 运行前的任务，通常是编译
+            "miDebuggerPath": "/usr/bin/gdb", // gdb 的路径，根据你的系统修改
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
